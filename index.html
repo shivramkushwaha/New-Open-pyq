@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b10">
+  <meta name="description" content="OPEN-PYQ — a question-focused, open-source problem-solving environment.">
+  <title>OPEN-PYQ — Question Lab</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#dashboard" aria-label="OPEN-PYQ home"><span class="brand-mark">O</span><span>OPEN<span class="brand-accent">-PYQ</span><small>QUESTION LAB</small></span></a>
+      <div class="environment"><span class="live-dot"></span><span id="active-env-label">GATE · CS</span><button id="open-environment" class="text-button" type="button">Change</button></div>
+      <button id="open-profile" class="profile-chip" type="button"><span id="user-avatar" class="avatar">L</span><span id="profile-label">Learner</span></button>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar" aria-label="Main navigation">
+        <p class="nav-caption">WORKSPACE</p>
+        <button class="nav-item active" data-view="dashboard" type="button"><span>◈</span> Overview</button>
+        <button class="nav-item" data-view="explorer" type="button"><span>⌕</span> Question explorer</button>
+        <button class="nav-item" data-view="bookmarks" type="button"><span>☆</span> Bookmarks <span id="bookmark-count" class="nav-count">0</span></button>
+        <button class="nav-item" data-view="print" type="button"><span>▤</span> Print / PDF</button>
+        <div class="sidebar-bottom"><div class="sidebar-note"><span class="live-dot"></span><div><strong>Independent thinking</strong><small>Hints, not full solutions.</small></div></div><p class="version-label">OPEN-PYQ · MVP 0.1</p></div>
+      </aside>
+
+      <main id="main-content" class="main-content">
+        <section id="view-dashboard" class="view">
+          <div class="hero-panel"><div class="eyebrow">YOUR EXAM ENVIRONMENT</div><h1>Less theory.<br><span>More thinking.</span></h1><p>One question at a time. Build the concept, test your reasoning, and check the answer when you're ready.</p><div class="hero-actions"><button id="start-exploring" class="button primary" type="button">Explore questions <span>↗</span></button><button id="dashboard-print" class="button secondary" type="button">Build a question sheet</button></div><div class="hero-grid-mark" aria-hidden="true"></div></div>
+          <div class="section-heading"><div><div class="eyebrow">ENVIRONMENT SNAPSHOT</div><h2 id="dashboard-paper-title">GATE · Computer Science</h2></div><span class="status-pill"><span class="live-dot"></span> Local demo data</span></div>
+          <div class="stats-grid"><article class="stat-card"><span class="stat-icon blue">⌕</span><span class="stat-label">Questions loaded</span><strong id="stat-questions">0</strong><small>Across this paper's sample set</small></article><article class="stat-card"><span class="stat-icon red">☆</span><span class="stat-label">Your bookmarks</span><strong id="stat-bookmarks">0</strong><small>Saved on this device</small></article><article class="stat-card"><span class="stat-icon brown">⌁</span><span class="stat-label">Topics available</span><strong id="stat-topics">0</strong><small>From the sample question data</small></article></div>
+          <div class="section-heading"><div><div class="eyebrow">PICK UP THE THREAD</div><h2>Question deck</h2></div><button id="view-all-questions" class="text-button" type="button">View all →</button></div><div id="dashboard-question-list" class="question-grid"></div>
+          <p class="data-notice"><strong>Prototype notice:</strong> the included questions are demonstration records, not verified official GATE previous-year questions. Replace them with sourced and reviewed records before public release.</p>
+        </section>
+
+        <section id="view-explorer" class="view hidden">
+          <div class="page-heading"><div><div class="eyebrow">QUESTION DATABASE</div><h1>Question explorer<span class="heading-dot">.</span></h1><p>Filter the collection, then open a question in the problem-solving terminal.</p></div><button id="explorer-print" class="button secondary" type="button">Print filtered set ↗</button></div>
+          <div class="filter-panel"><label class="search-field"><span>⌕</span><input id="search-input" type="search" placeholder="Search question, subject, topic…" autocomplete="off"></label><label>Year<select id="year-filter"><option value="ALL">All years</option></select></label><label>Subject<select id="subject-filter"><option value="ALL">All subjects</option></select></label><label>Topic<select id="topic-filter"><option value="ALL">All topics</option></select></label><button id="clear-filters" class="button subtle" type="button">Reset</button></div>
+          <div class="results-line"><span id="result-count">0 questions</span><span>Paper: <strong id="explorer-paper-label">GATE · CS</strong></span></div><div id="explorer-question-list" class="question-grid"></div>
+        </section>
+
+        <section id="view-bookmarks" class="view hidden"><div class="page-heading"><div><div class="eyebrow">YOUR SAVED QUESTIONS</div><h1>Bookmarks<span class="heading-dot">.</span></h1><p>Keep useful questions close. Bookmarks stay in this browser on this device.</p></div></div><div id="bookmark-question-list" class="question-grid"></div></section>
+
+        <section id="view-print" class="view hidden"><div class="page-heading"><div><div class="eyebrow">OFFLINE REVIEW</div><h1>Print builder<span class="heading-dot">.</span></h1><p>Choose a question set and use your browser's print dialog to save it as PDF.</p></div></div><div class="print-panel"><div class="print-options"><label class="check-row"><input id="print-include-answers" type="checkbox"><span><strong>Include answer keys</strong><small>Answers appear at the end of each question.</small></span></label><label class="check-row"><input id="print-include-hints" type="checkbox"><span><strong>Include problem-solving hints</strong><small>Hints are included without full solutions.</small></span></label><label class="check-row"><input id="print-use-filtered" type="checkbox" checked><span><strong>Use current explorer filters</strong><small>Turn off to print all questions in this paper.</small></span></label><button id="print-now" class="button primary" type="button">Preview / Save as PDF ↗</button></div><div><div class="eyebrow">PRINT SET</div><h2 id="print-set-title">GATE CS question set</h2><p id="print-set-summary" class="muted">Preparing questions…</p><div id="print-question-checklist" class="print-checklist"></div></div></div></section>
+      </main>
+    </div>
+  </div>
+
+  <dialog id="question-dialog" class="question-dialog"><form method="dialog"><button class="dialog-close" aria-label="Close question" type="submit">×</button></form><div id="question-detail"></div></dialog>
+  <dialog id="environment-dialog" class="settings-dialog"><div class="dialog-heading"><div><div class="eyebrow">PERSONALISE YOUR SPACE</div><h2>Choose your environment</h2></div><button class="dialog-close" data-close-dialog="environment-dialog" aria-label="Close" type="button">×</button></div><form id="environment-form" class="settings-form"><label>Display name<input id="name-input" maxlength="40" placeholder="Learner"></label><label>Examination<select id="exam-select"><option value="gate">GATE</option></select></label><label>Active paper<select id="paper-select"></select></label><p class="muted small">Your selection is saved in this browser, so you won't need to choose it every visit.</p><button class="button primary full-width" type="submit">Save environment</button></form></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
