@@ -1,0 +1,30 @@
+[
+  {
+    "id":"demo-cs-2026-001","examId":"gate","paperId":"CS","year":2026,"subjectId":"Programming & Data Structures","topicIds":["Trees"],"questionType":"MCQ","marks":1,"status":"demonstration",
+    "title":"Height of a balanced binary tree","text":"A binary tree has 31 nodes and is perfectly balanced. What is its height if the root is at level 0?",
+    "options":["3","4","5","31"],"answerKey":"4","concept":"In a perfect binary tree, the number of nodes is 2^(h+1) − 1 when the root is at level 0 and the height is h.",
+    "hints":["Write the relationship between the number of nodes and height.","Set 2^(h+1) − 1 equal to 31.","Add 1 to both sides, then identify the power of 2."],
+    "guidance":["Translate the wording into the standard node-count formula.","Isolate the exponential term before comparing powers."],"illustration":"Node count by level: 1 + 2 + 4 + 8 + 16 = 31.","relatedTopicIds":["Complexity"]
+  },
+  {
+    "id":"demo-cs-2025-002","examId":"gate","paperId":"CS","year":2025,"subjectId":"Algorithms","topicIds":["Sorting"],"questionType":"MCQ","marks":1,"status":"demonstration",
+    "title":"Asymptotic growth","text":"Which function grows fastest as n tends to infinity?",
+    "options":["log n","n log n","n²","2ⁿ"],"answerKey":"2ⁿ","concept":"Exponential functions with a base greater than 1 eventually grow faster than fixed-degree polynomial and logarithmic functions.",
+    "hints":["Group the choices by logarithmic, polynomial, and exponential growth.","Compare the exponential option with the polynomial options for large n."],
+    "guidance":["Classify each expression before comparing them.","Use asymptotic growth classes rather than substituting a small n."],"illustration":"Typical ordering: log n < n < n log n < n² < cⁿ (for c > 1).","relatedTopicIds":["Complexity"]
+  },
+  {
+    "id":"demo-cs-2024-003","examId":"gate","paperId":"CS","year":2024,"subjectId":"Discrete Mathematics","topicIds":["Logic"],"questionType":"MSQ","marks":2,"status":"demonstration",
+    "title":"Logical implication","text":"For propositions p and q, when is p → q false?",
+    "options":["p is true and q is false","p is false and q is true","Both are true","Both are false"],"answerKey":"p is true and q is false","concept":"Material implication is equivalent to ¬p ∨ q.",
+    "hints":["Use the equivalent expression ¬p ∨ q.","A disjunction is false only when both parts are false."],
+    "guidance":["Rewrite the implication using a standard logical equivalence.","Find the assignment that makes the entire disjunction false."],"illustration":"Truth table checkpoint: implication has one false row.","relatedTopicIds":["Combinatorics"]
+  },
+  {
+    "id":"demo-cs-2023-004","examId":"gate","paperId":"CS","year":2023,"subjectId":"Programming & Data Structures","topicIds":["Arrays"],"questionType":"NAT","marks":2,"status":"demonstration",
+    "title":"Array indexing","text":"An array uses zero-based indexing. What is the index of its 8th element?",
+    "options":[],"answerKey":"7","concept":"With zero-based indexing, the first element has index 0.",
+    "hints":["Write the index of the first and second elements.","The index is one less than the position counted from 1."],
+    "guidance":["Separate the human position number from the zero-based index."],"illustration":"Positions: 1, 2, 3, … map to indices: 0, 1, 2, …","relatedTopicIds":[]
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "examId":"gate",
+  "paperId":"CS",
+  "sourceStatus":"placeholder",
+  "note":"Replace this demonstration mapping with a reviewed mapping from the official GATE CS syllabus before publication.",
+  "subjects":[
+    {"id":"programming","name":"Programming & Data Structures","topics":["Arrays","Trees","Complexity"]},
+    {"id":"algorithms","name":"Algorithms","topics":["Sorting","Graph Algorithms"]},
+    {"id":"mathematics","name":"Discrete Mathematics","topics":["Logic","Combinatorics"]}
+  ]
+}

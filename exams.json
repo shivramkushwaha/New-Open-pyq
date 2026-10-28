@@ -1,0 +1,6 @@
+[
+  {"id":"gate","name":"GATE","status":"available","description":"Explore engineering, science, and mathematics question environments."},
+  {"id":"upsc-cse","name":"UPSC Civil Services","status":"planned","description":"A future modular environment."},
+  {"id":"cat","name":"CAT","status":"planned","description":"A future modular environment."},
+  {"id":"ielts","name":"IELTS","status":"planned","description":"A future modular environment."}
+]

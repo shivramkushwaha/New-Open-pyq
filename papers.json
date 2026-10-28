@@ -1,0 +1,8 @@
+[
+  {"id":"CS","examId":"gate","name":"Computer Science & Information Technology","shortName":"Computer Science","status":"available"},
+  {"id":"EE","examId":"gate","name":"Electrical Engineering","shortName":"Electrical Engineering","status":"planned"},
+  {"id":"EC","examId":"gate","name":"Electronics & Communication Engineering","shortName":"Electronics & Communication","status":"planned"},
+  {"id":"ME","examId":"gate","name":"Mechanical Engineering","shortName":"Mechanical Engineering","status":"planned"},
+  {"id":"CE","examId":"gate","name":"Civil Engineering","shortName":"Civil Engineering","status":"planned"},
+  {"id":"DA","examId":"gate","name":"Data Science & Artificial Intelligence","shortName":"Data Science & AI","status":"planned"}
+]
